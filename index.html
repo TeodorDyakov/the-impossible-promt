@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Impossible Prompt That’s Easy for Humans</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #prompt {
+            background-color: #f9f9f9;
+            margin-bottom: 20px;
+        }
+
+        img {
+            margin: 10 10 10 10;
+            margin-bottom: 40;
+        }
+
+        code {
+            font-size: large;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .responsive {
+            width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #111;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>The Impossible Prompt That's Easy for Humans</h1>
+
+        <p>Historically there have been very simple prompts that LLMs struggled with disproportionately
+            compared to the areas in which they excel. The early versions of ChatGPT struggled with very simple
+            one-step logical deduction. But that is no longer the case; in the last 2.5 years, LLMs have progressed
+            tremendously.</p>
+
+        <p>In fact, in 2025, with most LLMs achieving superior results in so many tasks, it is hard to find a prompt with a simple, objective answer that is trivially verifiable,
+            in which LLMs fail a 100%, but most humans can produce a correct answer.</p>
+        <p>Yet they still do exists and here I want to present one such prompt. So without further ado here is the prompt i used:</p>
+        <div id="prompt">
+            <code>Create an image that displays two seven-pointed stars, two eight-pointed stars, and two nine-pointed stars. All stars are connected to each other, except for the ones with the same number of strands. The lines connecting the stars must NOT intersect.</code>
+        </div>
+        <p>
+            It's actually a fun little problem. Using a pen and an
+            old notebook (tool use am i right), it took me (a person of very average intelligence) about a minute of
+            scribbling to arrive at a solution. Give it a try!</p>
+        <p>Here are the results from the all the major LLMs:</p>
+
+
+
+        <p>We start with <strong>ChatGPT</strong>:</p>
+        <img src="ChatGPT.png" class="responsive">
+        <p>Uh oh... Did it get anything right at all 🙃</p>
+        <p><strong>Grok</strong> gave us two images, how kind!</p>
+        <img src="grok.png" class="responsive">
+        <p>At least it looks pretty.</p>
+        <p>We continue with <strong>Gemini</strong>... </p>
+        <img src="gemini.jpg" class="responsive">
+        <p>And the most promising one, the rockstar of image generation, <strong>Nano Banana Pro</strong>.</p>
+        <img src="nano_banana.png" class="responsive">
+        <p>Looks promising but still wrong.</p>
+
+        <h2>Why is this query so hard for LLMs?</h2>
+
+        <p>My theory:</p>
+
+        <p>This query combines two things that have historically been the hardest for LLMs to handle: counting
+            (amusingly) and spatial awareness. These are further combined with a niche fact from graph theory, so it
+            isn't even obvious that the query is solvable.</p>
+
+    </div>
+</body>
+
+</html>
